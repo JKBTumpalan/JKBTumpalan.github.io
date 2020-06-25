@@ -8,21 +8,149 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link rel="stylesheet" href="/twitter.css">
+    <link rel="stylesheet" href="twitter.css">
     <title> Twitter / Home </title>
+
+    <script src="https://kit.fontawesome.com/4bbbe43fd8.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <div class="row">
-        <div class="col-2 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-component">
-            Left bar
+    <div class="row no-gutters">
+        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-component left-bar">
+            <div class="nav-div">
+
+                <!-- Bootstrap navbar template  -->
+                <nav class="navbar navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#twitterMenu" aria-controls="twitterMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fab hover-flag fa-twitter fa-fw fa-2x"></i>
+                    </button>
+                    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+                    <div class="collapse navbar-collapse" id="twitterMenu">
+
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                            <li class="nav-item active">
+                                <a class="navbar-brand" href="#"><i class="fab hover-flag fa-twitter fa-fw fa-2x"></i></a>
+                            </li>
+
+                            <br>
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#"> <i class="fas hover-flag fa-home fa-fw fa-2x"></i> <span class="nav-label">&nbsp; Home <span class="sr-only">(current)</span></span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas hover-flag fa-hashtag fa-fw fa-2x"></i> <span class="nav-label">&nbsp; Explore</span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"> <i class="far hover-flag fa-bell fa-fw fa-2x"></i> <span class="nav-label">&nbsp; Notifications</span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="far hover-flag fa-envelope fa-fw fa-2x"></i> <span class="nav-label">&nbsp; Messages</span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="far hover-flag fa-bookmark fa-fw fa-2x"></i> <span class="nav-label">&nbsp; Bookmarks</span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="far hover-flag fa-list-alt fa-fw fa-2x"></i> <span class="nav-label">&nbsp; Lists</span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="far hover-flag fa-user fa-fw fa-2x"></i> <span class="nav-label">&nbsp; Profile</span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span class="fa-stack hover-flag fa-fw fa-1x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fas fa-ellipsis-h fa-stack-1x"></i>
+                                    </span> <span class="nav-label">&nbsp; More
+                                </span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-primary nav-tweet">Tweet</button>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <h5 class="mobile-only"> Home </h5>
+                    <a class="theme-switch mobile-only" id="lightBulb" href="#"><i class="fas fa-lightbulb fa-fw fa-2x"></i></a>
+                </nav>
+            </div>
         </div>
-        <div class="col-10 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-component">
-            Main bar
+        <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-component">
+            <div class="main-bar">
+                <!-- <h4 class="tabTitle"><b>Home </b></h4>
+
+                <a class="theme-switch" id="lightBulb" href="#"><i class="fas fa-lightbulb fa-fw fa-2x"></i></a> -->
+
+                <div class="tweet-block">
+                    <div class="userPhoto">
+                        <i class="far hover-flag fa-user fa-fw fa-2x"></i>
+                    </div>
+                    <form id="tweet-form">
+                        <div class="form-group">
+                            <textarea class="form-control" id="tweetForm" rows="3" placeholder="What's happening?"></textarea> </div>
+                        <ul class="tweet-media">
+                            <li class="media-item"><i class="far fa-image fa-lg"></i></li>
+                            <li class="media-item"><i class="fas fa-poll-h fa-lg"></i></li>
+                            <li class="media-item"><i class="fas fa-poll-h fa-lg"></i></li>
+                            <li class="media-item"><i class="far fa-clock fa-lg"></i></li>
+                        </ul>
+                        <button type="submit" class="btn btn-primary btn-tweet">Tweet</button>
+                    </form>
+                </div>
+
+
+                <div class="post-block">
+                    <div class="userPhoto">
+                        <i class="far hover-flag fa-user fa-fw fa-2x"></i>
+                    </div>
+                    <div class="tweetContent">
+                        <h6>
+                            <b> User name </b>
+                            <small class="text-muted">@userTag - time elapsed</small>
+                        </h6>
+                        <p> Tweet Content Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, accusantium! </p>
+                    </div>
+                    <div class="tweetActions">
+                        <a> <i class="far fa-comment fa-fw"></i> <span class="actionCountLabel"> w,xxx </span> </a>
+                        <a> <i class="fas fa-retweet fa-fw"></i> <span class="actionCountLabel"> x,xxx </span> </a>
+                        <a> <i class="far fa-heart fa-fw"></i> <span class="actionCountLabel"> y,xxx </span> </a>
+                        <a> <i class="far fa-share-square fa-fw"></i> <span class="actionCountLabel"> z,xxx </span> </a>
+                    </div>
+                </div>
+                <div class="post-block">
+                    <div class="userPhoto">
+                        <i class="far hover-flag fa-user fa-fw fa-2x"></i>
+                    </div>
+                    <div class="tweetContent">
+                        <h6>
+                            <b> User name </b>
+                            <small class="text-muted">@userTag - time elapsed</small>
+                        </h6>
+                        <p> Tweet Content Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, accusantium! </p>
+                        <img src="img/4k-1.jpg" alt="tweet-img" class="tweet-img">
+                    </div>
+                    <div class="tweetActions">
+                        <a> <i class="far fa-comment fa-fw"></i> <span class="actionCountLabel"> w,xxx </span> </a>
+                        <a> <i class="fas fa-retweet fa-fw"></i> <span class="actionCountLabel"> x,xxx </span> </a>
+                        <a> <i class="far fa-heart fa-fw"></i> <span class="actionCountLabel"> y,xxx </span> </a>
+                        <a> <i class="far fa-share-square fa-fw"></i> <span class="actionCountLabel"> z,xxx </span> </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-0 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-component">
+        <div class="col-0 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-component right-bar">
             Right bar
         </div>
     </div>
