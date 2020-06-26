@@ -12,6 +12,7 @@
     <title> Twitter / Home </title>
 
     <script src="https://kit.fontawesome.com/4bbbe43fd8.js" crossorigin="anonymous"></script>
+    <script src="twitter.js"></script>
 </head>
 
 <body>
@@ -82,9 +83,75 @@
 
                         </ul>
                     </div>
+                    <div class="desktop-menu">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                            <li class="nav-item active">
+                                <a class="navbar-brand" href="#"><i class="fab hover-flag fa-twitter fa-fw fa-2x"></i></a>
+                            </li>
+
+                            <br>
+
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#"> <i class="fas hover-flag fa-home fa-fw fa-2x"></i> <span class="nav-label">&nbsp; Home <span class="sr-only">(current)</span></span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="fas hover-flag fa-hashtag fa-fw fa-2x"></i> <span class="nav-label">&nbsp; Explore</span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"> <i class="far hover-flag fa-bell fa-fw fa-2x"></i> <span class="nav-label">&nbsp; Notifications</span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="far hover-flag fa-envelope fa-fw fa-2x"></i> <span class="nav-label">&nbsp; Messages</span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="far hover-flag fa-bookmark fa-fw fa-2x"></i> <span class="nav-label">&nbsp; Bookmarks</span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="far hover-flag fa-list-alt fa-fw fa-2x"></i> <span class="nav-label">&nbsp; Lists</span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="far hover-flag fa-user fa-fw fa-2x"></i> <span class="nav-label">&nbsp; Profile</span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <span class="fa-stack hover-flag fa-fw fa-1x">
+                                        <i class="fa fa-circle fa-stack-2x"></i>
+                                        <i class="fas fa-ellipsis-h fa-stack-1x"></i>
+                                    </span> <span class="nav-label">&nbsp; More
+                                </span></a>
+                            </li>
+
+                            <li class="nav-item">
+                                <button type="button" class="btn btn-primary nav-tweet">Tweet</button>
+                            </li>
+
+                        </ul>
+                    </div>
                     <h5 class="mobile-only"> Home </h5>
                     <a class="theme-switch mobile-only" id="lightBulb" href="#"><i class="fas fa-lightbulb fa-fw fa-2x"></i></a>
                 </nav>
+            </div>
+
+            <div class="profile-block desktop-component left-profile-block">
+                <div class="userPhoto">
+                    <i class="far hover-flag fa-user fa-fw fa-2x"></i>
+                </div>
+                <div class="userContent">
+                    <h6>
+                        <b> User name </b>
+                        <small class="text-muted">@userTag</small>
+                    </h6>
+                    <i class="fas fa-caret-down d-inline profile-caret"></i>
+                </div>
             </div>
         </div>
         <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-component">
@@ -148,10 +215,107 @@
                         <a> <i class="far fa-share-square fa-fw"></i> <span class="actionCountLabel"> z,xxx </span> </a>
                     </div>
                 </div>
+                <div class="post-block">
+                    <div class="userPhoto">
+                        <i class="far hover-flag fa-user fa-fw fa-2x"></i>
+                    </div>
+                    <div class="tweetContent">
+                        <h6>
+                            <b> User name </b>
+                            <small class="text-muted">@userTag - time elapsed</small>
+                        </h6>
+                        <p> Tweet Content Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, accusantium! </p>
+                        <img src="img/4k-1.jpg" alt="tweet-img" class="tweet-img">
+                    </div>
+                    <div class="tweetActions">
+                        <a> <i class="far fa-comment fa-fw"></i> <span class="actionCountLabel"> w,xxx </span> </a>
+                        <a> <i class="fas fa-retweet fa-fw"></i> <span class="actionCountLabel"> x,xxx </span> </a>
+                        <a> <i class="far fa-heart fa-fw"></i> <span class="actionCountLabel"> y,xxx </span> </a>
+                        <a> <i class="far fa-share-square fa-fw"></i> <span class="actionCountLabel"> z,xxx </span> </a>
+                    </div>
+                </div>
+                <div class="post-block">
+                    <div class="userPhoto">
+                        <i class="far hover-flag fa-user fa-fw fa-2x"></i>
+                    </div>
+                    <div class="tweetContent">
+                        <h6>
+                            <b> User name </b>
+                            <small class="text-muted">@userTag - time elapsed</small>
+                        </h6>
+                        <p> Tweet Content Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, accusantium! </p>
+                        <img src="img/4k-1.jpg" alt="tweet-img" class="tweet-img">
+                    </div>
+                    <div class="tweetActions">
+                        <a> <i class="far fa-comment fa-fw"></i> <span class="actionCountLabel"> w,xxx </span> </a>
+                        <a> <i class="fas fa-retweet fa-fw"></i> <span class="actionCountLabel"> x,xxx </span> </a>
+                        <a> <i class="far fa-heart fa-fw"></i> <span class="actionCountLabel"> y,xxx </span> </a>
+                        <a> <i class="far fa-share-square fa-fw"></i> <span class="actionCountLabel"> z,xxx </span> </a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-0 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-component right-bar">
-            Right bar
+            <div class="search-bar right-component">
+                <nav class="navbar">
+                    <form class="form-inline">
+                        <i class="fas fa-search"></i>
+                        <input class="form-control search-input mr-sm-2" type="search" placeholder="Search Twitter" aria-label="Search">
+                    </form>
+                </nav>
+            </div>
+            <div class="trend-bar right-component">
+
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between align-items-center"> Trends for you <span class="badge badge-primary badge-pill"><i class="fas fa-cog"></i></span></li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <small class="text-muted trend-component">Trending in the Philippines</small> Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, quibusdam.
+                        <span class="badge badge-primary badge-pill"><i class="fas fa-caret-down"></i></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <small class="text-muted trend-component">Trending in the Philippines</small> Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, minima.
+                        <span class="badge badge-primary badge-pill"><i class="fas fa-caret-down"></i></span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <small class="text-muted trend-component">Trending in the Philippines</small> Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, eius?
+                        <span class="badge badge-primary badge-pill"><i class="fas fa-caret-down"></i></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="follow-recommendation-bar right-component">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"> Who to follow </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="profile-block">
+                            <div class="userPhoto">
+                                <i class="far hover-flag fa-user fa-fw fa-2x"></i>
+                            </div>
+                            <div class="userContent">
+                                <h6>
+                                    <b> User name </b>
+                                    <small class="text-muted">@userTag</small>
+                                </h6>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-light nav-tweet"> Follow </button>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div class="profile-block">
+                            <div class="userPhoto">
+                                <i class="far hover-flag fa-user fa-fw fa-2x"></i>
+                            </div>
+                            <div class="userContent">
+                                <h6>
+                                    <b> User name </b>
+                                    <small class="text-muted">@userTag</small>
+                                </h6>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-light nav-tweet"> Follow </button>
+                    </li>
+                </ul>
+
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

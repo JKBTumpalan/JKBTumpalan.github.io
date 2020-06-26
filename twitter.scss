@@ -1,5 +1,8 @@
     .left-bar {
         background-color: aquamarine;
+        position: sticky;
+        top: 0px;
+        z-index: 4;
         width: 100%;
     }
     
@@ -42,6 +45,31 @@
         }
     }
     
+    .fa-twitter {
+        color: rgb(70, 139, 228) !important;
+    }
+    
+    .nav-item {
+        border: 1px solid black;
+        a {
+            color: black !important;
+        }
+        a:hover {
+            color: rgb(70, 139, 228) !important;
+        }
+        .nav-tweet {
+            border-radius: 50px;
+            width: 70%;
+            margin-left: 15%;
+        }
+    }
+    
+    .desktop-menu {
+        z-index: 3;
+        display: none;
+    }
+    
+    //Main bar
     .main-bar {
         overflow-x: hidden;
         width: 100%;
@@ -110,16 +138,123 @@
             position: relative;
             padding-left: 65px;
             display: inline-block;
+            a {
+                margin-right: 10px;
+            }
         }
     }
     
-    .right-bar {
+    .right-bar,
+    .desktop-component {
         display: none;
     }
     
     @media only screen and (min-width: 668px) {
         /* STYLES GO HERE */
+        .left-bar {
+            height: 100vh;
+        }
         .mobile-only {
             display: none;
+        }
+        .navbar {
+            position: relative;
+            background-color: aquamarine !important;
+        }
+        .desktop-component {
+            display: inline-block;
+        }
+        .desktop-menu {
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            right: 32%;
+            height: 100vh;
+        }
+        .navbar-collapse,
+        .navbar-toggler {
+            display: none;
+        }
+        .right-bar {
+            display: inline-block;
+            overflow: scroll;
+            .right-component {
+                margin: 20px;
+                border-radius: 20px;
+                overflow: hidden;
+                .list-group-item {
+                    background-color: rgb(233, 233, 233) !important;
+                }
+                .list-group {
+                    .list-group-item {
+                        padding-top: 23px;
+                        padding-bottom: 7px;
+                        overflow: hidden;
+                        position: relative;
+                        .trend-component {
+                            position: absolute;
+                            top: 5px;
+                        }
+                    }
+                }
+            }
+            .search-bar {
+                .navbar {
+                    background-color: rgb(233, 233, 233) !important;
+                }
+            }
+        }
+        .left-profile-block {
+            position: absolute;
+            bottom: 4%;
+            right: 13%;
+            overflow: hidden;
+            border: 1px solid black;
+            .userPhoto {
+                float: left;
+                border: 1px solid red;
+                border-radius: 50%;
+                margin-top: 5px;
+                margin-left: 5px;
+                padding-right: 10px;
+            }
+            .userContent {
+                position: relative;
+                border: 1px solid green;
+                padding-left: 40px;
+                padding-top: 5px;
+                h6 {
+                    padding-right: 20px;
+                }
+                .profile-caret {
+                    position: absolute;
+                    top: 4px;
+                    right: 0px;
+                }
+            }
+        }
+        .profile-block {
+            .userPhoto {
+                float: left;
+                border: 1px solid red;
+                border-radius: 50%;
+                margin-top: 5px;
+                margin-left: 5px;
+                padding-right: 10px;
+            }
+            .userContent {
+                position: relative;
+                border: 1px solid green;
+                padding-left: 40px;
+                padding-top: 5px;
+                h6 {
+                    padding-right: 20px;
+                }
+                .profile-caret {
+                    position: absolute;
+                    top: 4px;
+                    right: 0px;
+                }
+            }
         }
     }
