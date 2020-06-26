@@ -19,7 +19,7 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <div class="row no-gutters">
-        <div class="col-12 col-sm-3 col-md-3 col-lg-3 col-xl-3 col-component left-bar">
+        <div class="col-12 col-sm-2 col-md-3 col-lg-3 col-xl-3 col-component left-bar">
             <div class="nav-div">
 
                 <!-- Bootstrap navbar template  -->
@@ -84,7 +84,7 @@
                         </ul>
                     </div>
                     <div class="desktop-menu">
-                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <ul class="navbar-nav mt-2 mt-lg-0">
 
                             <li class="nav-item active">
                                 <a class="navbar-brand" href="#"><i class="fab hover-flag fa-twitter fa-fw fa-2x"></i></a>
@@ -131,7 +131,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <button type="button" class="btn btn-primary nav-tweet">Tweet</button>
+                                <button type="button" class="btn btn-primary nav-tweet"><i class="fas fa-feather-alt fw fa-lg"></i> <span class="nav-label">Tweet</span></button>
                             </li>
 
                         </ul>
@@ -154,12 +154,13 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-component">
+        <div class="col-12 col-sm-10 col-md-5 col-lg-5 col-xl-5 col-component">
             <div class="main-bar">
-                <!-- <h4 class="tabTitle"><b>Home </b></h4>
+                <div class="header-tab desktop-component justify-content-between align-items-center">
+                    <h4 class="tabTitle"><b>Home </b></h4>
 
-                <a class="theme-switch" id="lightBulb" href="#"><i class="fas fa-lightbulb fa-fw fa-2x"></i></a> -->
-
+                    <a class="theme-switch" id="lightBulb" href="#"><i class="fas fa-lightbulb fa-fw fa-2x"></i></a>
+                </div>
                 <div class="tweet-block">
                     <div class="userPhoto">
                         <i class="far hover-flag fa-user fa-fw fa-2x"></i>
@@ -255,11 +256,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-0 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-component right-bar">
+        <div class="col-0 col-sm-0 col-md-4 col-lg-4 col-xl-4 col-component right-bar">
             <div class="search-bar right-component">
                 <nav class="navbar">
+                    <i class="fas fa-search fw fa-lg" id="search-icon"></i>
                     <form class="form-inline">
-                        <i class="fas fa-search"></i>
                         <input class="form-control search-input mr-sm-2" type="search" placeholder="Search Twitter" aria-label="Search">
                     </form>
                 </nav>

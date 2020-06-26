@@ -61,11 +61,18 @@
             border-radius: 50px;
             width: 70%;
             margin-left: 15%;
+            .fa-feather-alt {
+                display: none;
+            }
         }
     }
     
     .desktop-menu {
         z-index: 3;
+        display: none;
+    }
+    
+    .desktop-component {
         display: none;
     }
     
@@ -82,6 +89,8 @@
             position: absolute;
             padding-top: 10px;
             padding-left: 10px;
+            height: 40px;
+            width: 40px;
         }
         #tweet-form {
             padding-left: 65px;
@@ -119,6 +128,8 @@
         padding-bottom: 10px;
         .userPhoto {
             position: absolute;
+            height: 40px;
+            width: 40px;
             padding-top: 10px;
             padding-left: 10px;
         }
@@ -149,10 +160,10 @@
         display: none;
     }
     
-    @media only screen and (min-width: 668px) {
-        /* STYLES GO HERE */
+    @media only screen and (min-width: 576px) {
         .left-bar {
             height: 100vh;
+            overflow: auto;
         }
         .mobile-only {
             display: none;
@@ -163,6 +174,15 @@
         }
         .desktop-component {
             display: inline-block;
+        }
+        .header-tab {
+            padding: 20px 20px 10px 20px;
+            display: flex;
+        }
+        .nav-item {
+            .nav-tweet {
+                width: 90%;
+            }
         }
         .desktop-menu {
             position: absolute;
@@ -177,7 +197,6 @@
         }
         .right-bar {
             display: inline-block;
-            overflow: scroll;
             .right-component {
                 margin: 20px;
                 border-radius: 20px;
@@ -201,8 +220,15 @@
             .search-bar {
                 .navbar {
                     background-color: rgb(233, 233, 233) !important;
+                    form {
+                        padding-left: 25px;
+                    }
                 }
             }
+        }
+        .fa-search {
+            position: absolute;
+            padding-right: 15px;
         }
         .left-profile-block {
             position: absolute;
@@ -213,6 +239,8 @@
             .userPhoto {
                 float: left;
                 border: 1px solid red;
+                height: 40px;
+                width: 40px;
                 border-radius: 50%;
                 margin-top: 5px;
                 margin-left: 5px;
@@ -238,6 +266,8 @@
                 float: left;
                 border: 1px solid red;
                 border-radius: 50%;
+                height: 40px;
+                width: 40px;
                 margin-top: 5px;
                 margin-left: 5px;
                 padding-right: 10px;
@@ -256,5 +286,41 @@
                     right: 0px;
                 }
             }
+        }
+        .follow-recommendation-bar {
+            position: -webkit- sticky;
+            position: sticky;
+            top: 0;
+        }
+    }
+    
+    //Label responsiveness
+    @media only screen and (min-width: 576px) and (max-width: 875px) {
+        .nav-label {
+            display: none;
+        }
+        .nav-item {
+            .nav-tweet {
+                border-radius: 50%;
+                margin-left: 0px;
+                height: 40px;
+                width: 50px;
+                .fa-feather-alt {
+                    display: inline-block;
+                }
+            }
+        }
+        .left-profile-block {
+            right: 43%;
+            .userContent {
+                display: none;
+            }
+        }
+    }
+    
+    //Height constraint
+    @media only screen and (max-height: 625px) {
+        .left-profile-block {
+            display: none;
         }
     }
