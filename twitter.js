@@ -12,7 +12,10 @@ function addTweet() {
         "<div class=\"tweetContent\"> <h6> <b> Kulengggg </b> <small class=\"text-muted\"> @khalsuu - 1m ago </small> </h6> <p>",
         new_tweet,
         "</p></div>",
-        "<div class=\"tweetActions\"><a> <i class=\"far fa-comment fa-fw\"></i> <span class=\"actionCountLabel\"> w,xxx </span> </a><a> <i class=\"fas fa-retweet fa-fw\"></i> <span class=\"actionCountLabel\"> x,xxx </span> </a><a> <i class=\"far fa-heart fa-fw\"></i> <span class=\"actionCountLabel\"> y,xxx </span> </a><a> <i class=\"far fa-share-square fa-fw\"></i> <span class=\"actionCountLabel\"> z,xxx </span> </a> </div>"
+        "<div class=\"tweetActions\"><a> <i class=\"far fa-comment fa-fw\"></i> <span class=\"actionCountLabel\">", randomInteger().toString() + 'k',
+        "</span> </a><a> <i class=\"fas fa-retweet fa-fw\"></i> <span class=\"actionCountLabel\">", randomInteger().toString() + 'k',
+        "</span> </a><a> <i class=\"far fa-heart fa-fw\"></i> <span class=\"actionCountLabel\">", randomInteger().toString() + 'k',
+        "</span> </a><a> <i class=\"far fa-share-square fa-fw\"></i> <span class=\"actionCountLabel\">", randomInteger().toString() + 'k', "</span> </a> </div>"
     ].join('');
 
     console.log("logging..");
@@ -26,8 +29,8 @@ function addTweet() {
     $("#tweetForm").val("");
 }
 
-function window_alert() {
-    alert("JS INJECTED!");
+function randomInteger() {
+    return Math.ceil((Math.random() * 100) + 1);
 }
 
 tweet_button.addEventListener('click', addTweet);
