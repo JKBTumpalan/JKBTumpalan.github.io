@@ -8,7 +8,7 @@ function addTweet() {
 
 
     var tweet_block_code = [
-        "<div class=\"userPhoto\"> <i class=\"far hover-flag fa-user fa-fw fa-2x\"> </i></div>",
+        "<div class=\"userPhoto\"> <img src=\"img/me3.jpg\" alt=\"tweet-img\" class=\"tweet-img\"></div>",
         "<div class=\"tweetContent\"> <h6> <b> Kulengggg </b> <small class=\"text-muted\"> @khalsuu - 1m ago </small> </h6> <p>",
         new_tweet,
         "</p></div>",
