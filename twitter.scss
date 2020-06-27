@@ -1,5 +1,4 @@
     .left-bar {
-        background-color: aquamarine;
         position: sticky;
         top: 0px;
         z-index: 4;
@@ -22,7 +21,7 @@
             .navbar-collapse {
                 z-index: 3;
                 position: absolute;
-                background-color: rgb(221, 221, 221);
+                background-color: rgb(233, 233, 233);
                 top: 0;
                 right: 100%;
                 padding-left: 15px;
@@ -50,7 +49,6 @@
     }
     
     .nav-item {
-        border: 1px solid black;
         a {
             color: black !important;
         }
@@ -67,6 +65,12 @@
         }
     }
     
+    .active {
+        a {
+            color: rgb(70, 139, 228) !important;
+        }
+    }
+    
     .desktop-menu {
         z-index: 3;
         display: none;
@@ -79,11 +83,13 @@
     //Main bar
     .main-bar {
         overflow-x: hidden;
+        border-left: 1px solid rgb(207, 207, 207);
+        border-right: 1px solid rgb(207, 207, 207);
         width: 100%;
     }
     
     .tweet-block {
-        border: 1px solid red;
+        border-top: 1px solid rgb(207, 207, 207);
         position: relative;
         .userPhoto {
             position: absolute;
@@ -96,7 +102,6 @@
             padding-left: 65px;
             overflow: hidden;
             .tweet-media {
-                border: 1px solid black;
                 position: relative;
                 overflow: hidden;
                 display: inline-block;
@@ -110,7 +115,6 @@
                 }
             }
             .btn-tweet {
-                border: 1px solid black;
                 float: right;
                 position: relative;
                 margin-bottom: 10px;
@@ -119,8 +123,14 @@
         }
     }
     
+    .fa-image,
+    .fa-poll-h,
+    .fa-clock {
+        color: rgb(70, 139, 228) !important;
+    }
+    
     .post-block {
-        border: 1px solid red;
+        border-top: 1px solid rgb(207, 207, 207);
         position: relative;
         line-height: 15pt;
         width: 100%;
@@ -170,7 +180,6 @@
         }
         .navbar {
             position: relative;
-            background-color: aquamarine !important;
         }
         .desktop-component {
             display: inline-block;
@@ -235,10 +244,8 @@
             bottom: 4%;
             right: 13%;
             overflow: hidden;
-            border: 1px solid black;
             .userPhoto {
                 float: left;
-                border: 1px solid red;
                 height: 40px;
                 width: 40px;
                 border-radius: 50%;
@@ -248,7 +255,6 @@
             }
             .userContent {
                 position: relative;
-                border: 1px solid green;
                 padding-left: 40px;
                 padding-top: 5px;
                 h6 {
@@ -264,7 +270,6 @@
         .profile-block {
             .userPhoto {
                 float: left;
-                border: 1px solid red;
                 border-radius: 50%;
                 height: 40px;
                 width: 40px;
@@ -274,7 +279,6 @@
             }
             .userContent {
                 position: relative;
-                border: 1px solid green;
                 padding-left: 40px;
                 padding-top: 5px;
                 h6 {
@@ -319,7 +323,7 @@
     }
     
     //Height constraint
-    @media only screen and (max-height: 625px) {
+    @media only screen and (max-height: 600px) {
         .left-profile-block {
             display: none;
         }
