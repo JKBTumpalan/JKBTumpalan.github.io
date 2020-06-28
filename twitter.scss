@@ -1,3 +1,4 @@
+    //design for left bar.
     .left-bar {
         position: sticky;
         top: 0px;
@@ -5,12 +6,15 @@
         width: 100%;
     }
     
+    //puts the nav-bar toggler above the bg and fg elements
     .navbar-toggler {
         z-index: 2;
     }
     
+    //main navigation div
     .nav-div {
         nav {
+            //sets fixed height and width and circular borders to the toggler
             .navbar-toggler {
                 border-radius: 50%;
                 i {
@@ -18,6 +22,7 @@
                     width: 25px;
                 }
             }
+            //sets the behavior of the collapsed content, for it to be in the top of the 'virtual stack' of elements
             .navbar-collapse {
                 z-index: 3;
                 position: absolute;
@@ -32,6 +37,7 @@
                 transition: all 0.3s ease;
                 display: inline-block;
             }
+            //transition for toggler-click
             .navbar-collapse.collapsing {
                 height: auto !important;
                 margin-right: 50%;
@@ -44,10 +50,12 @@
         }
     }
     
+    //color of twitter icon
     .fa-twitter {
         color: rgb(70, 139, 228) !important;
     }
     
+    //individual nav items from the left bar menu
     .nav-item {
         a {
             color: black !important;
@@ -55,6 +63,7 @@
         a:hover {
             color: rgb(70, 139, 228) !important;
         }
+        //layout for "tweet" button on the left bar
         .nav-tweet {
             border-radius: 50px;
             width: 70%;
@@ -65,17 +74,20 @@
         }
     }
     
+    //behavior of active elements in the bootstrap navbar
     .active {
         a {
             color: rgb(70, 139, 228) !important;
         }
     }
     
+    //layout for nav menu in the desktop to overtop the uncollapsed content in the mobile layout
     .desktop-menu {
         z-index: 3;
         display: none;
     }
     
+    //components to display for desktop only
     .desktop-component {
         display: none;
     }
@@ -88,6 +100,7 @@
         width: 100%;
     }
     
+    //Main tweet block, similar to the post block but differing in the fixed form for the user's tweet content"
     .tweet-block {
         border-top: 1px solid rgb(207, 207, 207);
         position: relative;
@@ -123,12 +136,14 @@
         }
     }
     
+    //icons in the tweet-block
     .fa-image,
     .fa-poll-h,
     .fa-clock {
         color: rgb(70, 139, 228) !important;
     }
     
+    //behavior of all circular user photo from the tweets, following, and other components of the webpage.
     .userPhoto {
         position: relative;
         overflow: hidden;
@@ -146,13 +161,7 @@
         margin-right: 10px;
     }
     
-    // #testUserPhoto {
-    //     background-image: url(img/me3.jpg);
-    //     background-position: 50% 50%;
-    //     width: 50px;
-    //     height: 50px;
-    //     background-repeat: no-repeat;
-    // }
+    //main layout for the post, sets padding, spacing, and positioning elements to match the twitter's layout
     .post-block {
         border-top: 1px solid rgb(207, 207, 207);
         position: relative;
@@ -187,26 +196,32 @@
         }
     }
     
+    //fits image to the circular div content
     .userPhoto>img {
         object-fit: contain;
     }
     
+    //hides the right bar in mobile widths
     .right-bar,
     .desktop-component {
         display: none;
     }
     
+    //Media query for the desktop components
     @media only screen and (min-width: 576px) {
+        //sets leftbar to 100% view height to always cover full height in desktop
         .left-bar {
             height: 100vh;
             overflow: auto;
         }
+        //hides mobile only content
         .mobile-only {
             display: none;
         }
         .navbar {
             position: relative;
         }
+        //overwrites the none display of desktop components in the mobile selectors
         .desktop-component {
             display: inline-block;
         }
@@ -226,10 +241,12 @@
             right: 32%;
             height: 100vh;
         }
+        //hides togglers and collapse from the mobile layout
         .navbar-collapse,
         .navbar-toggler {
             display: none;
         }
+        //overwrites the none display of right-bar component in the mobile selectors. Layouts the positioning of the follow-recommendations and trending bar
         .right-bar {
             display: inline-block;
             .right-component {
@@ -261,10 +278,12 @@
                 }
             }
         }
+        //search icon beside the search form
         .fa-search {
             position: absolute;
             padding-right: 15px;
         }
+        //a component in the desktop that shows the current user, uses absolute positioning in the lower left of the page.
         .left-profile-block {
             position: absolute;
             bottom: 4%;
@@ -293,6 +312,7 @@
                 }
             }
         }
+        //general "profile block" for the follow-recommendation and the left profile block
         .profile-block {
             .userPhoto {
                 float: left;
@@ -325,7 +345,7 @@
         }
     }
     
-    //Label responsiveness
+    //Label responsiveness for small widths
     @media only screen and (min-width: 576px) and (max-width: 875px) {
         .nav-label {
             display: none;
@@ -349,7 +369,7 @@
         }
     }
     
-    //Height constraint
+    //Height constraint to avoid the absolute positioning of left profile block to overtop the nav bar in low-height devices
     @media only screen and (max-height: 600px) {
         .left-profile-block {
             display: none;
